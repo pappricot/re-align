@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, View } from 'react-native';
 import { ThemedText } from './ThemedText';
 import { ThemedView } from './ThemedView';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
@@ -14,41 +14,39 @@ const VideoCard: React.FC<VideoCardProps> = ({ title, duration, thumbnail }) => 
   return (
     <ThemedView style={styles.container}>
       <Image source={{ uri: thumbnail }} style={styles.thumbnail} />
-      <ThemedText type="subtitle" style={styles.title}>{title}</ThemedText>
-      <ThemedText style={styles.duration}>{duration}</ThemedText>
+      <View style={styles.content}>
+        <ThemedText type="subtitle" style={styles.title}>{title}</ThemedText>
+        <ThemedText style={styles.duration}>{duration}</ThemedText>
+      </View>
     </ThemedView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
-    marginBottom: 16,
-    borderRadius: 8,
-    width: '48%',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
-    backgroundColor: '#FFF',
-    marginHorizontal: 8,  
-    marginTop: 8  
- 
+    width: 280,
+    marginRight: 16,
+    borderRadius: 20,
+    overflow: 'hidden',
+    backgroundColor: 'pink',
+    marginVertical: 10,
+    borderWidth: 1,
+    borderColor: Colors.light.accent,
+   
   },
   thumbnail: {
     width: '100%',
-    height: 120,
-    borderRadius: 8,
-    marginBottom: 8,
+    height: 160,
+  },
+  content: {
+    padding: 20,
   },
   title: {
-    fontSize: 16,
     marginBottom: 4,
   },
   duration: {
     fontSize: 14,
-    color: '#FF69B4',
+    color: Colors.light.accent,
   },
 });
 

@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, View } from 'react-native';
 import { ThemedText } from './ThemedText';
 import { ThemedView } from './ThemedView';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 interface BlogPostCardProps {
   title: string;
@@ -23,34 +24,28 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ title, excerpt, image }) =>
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    padding: 16,
-    marginBottom: 16,
-    borderRadius: 8,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
-    backgroundColor: '#FFF',
-    marginTop: 8
+    marginBottom: 20,
+    borderRadius: 20,
+    overflow: 'hidden',
+    backgroundColor: 'pink',
+    marginVertical: 10,
+    borderWidth: 1,
+    borderColor: Colors.light.accent,
+ 
   },
   image: {
-    width: 80,
-    height: 80,
-    borderRadius: 8,
-    marginRight: 16,
+    width: '100%',
+    height: 200,
   },
   content: {
-    flex: 1,
+    padding: 20,
   },
   title: {
-    fontSize: 18,
     marginBottom: 8,
   },
   excerpt: {
     fontSize: 14,
-    color: '#8E4585',
+    color: Colors.light.text,
   },
 });
 

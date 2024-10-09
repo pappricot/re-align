@@ -23,13 +23,9 @@ export function ThemedText({
     <Text
       style={[
         { color },
-        type === 'default' ? styles.default : undefined,
-        type === 'title' ? styles.title : undefined,
-        type === 'defaultSemiBold' ? styles.defaultSemiBold : undefined,
-        type === 'subtitle' ? styles.subtitle : undefined,
-        type === 'link' ? styles.link : undefined,
-        style,
+        styles[type],
         align === 'center' ? styles.center : align === 'left' ? styles.left : align === 'right' ? styles.right : undefined,
+        style,
       ]}
       {...rest}
     />
@@ -40,32 +36,21 @@ const styles = StyleSheet.create({
   default: {
     fontSize: 16,
     lineHeight: 24,
-    fontFamily: 'Roboto',
-  },
-  defaultSemiBold: {
-    fontSize: 16,
-    lineHeight: 24,
-    fontWeight: '600',
-    fontFamily: 'Roboto',
   },
   title: {
-    fontSize: 32,
+    fontSize: 28,
     fontWeight: 'bold',
-    lineHeight: 32,
-    fontFamily: 'Playfair Display',
-    letterSpacing: 1,
+    lineHeight: 34,
   },
   subtitle: {
     fontSize: 20,
-    fontWeight: 'bold',
-    fontFamily: 'Playfair Display',
+    fontWeight: '600',
+    lineHeight: 28,
   },
   link: {
-    lineHeight: 30,
     fontSize: 16,
-    color: '#FF69B4',
-    fontFamily: 'Roboto',
-    textDecorationLine: 'underline',
+    lineHeight: 24,
+    color: '#6D5DFC',
   },
   center: {
     textAlign: 'center',

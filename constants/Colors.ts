@@ -8,19 +8,19 @@ const tintColorDark = '#FFC0CB'; // Light Pink
 
 export const Colors = {
   light: {
-    text: '#4A0E4E', // Deep Purple
-    background: '#FFF0F5', // Lavender Blush
-    tint: tintColorLight,
-    icon: '#8E4585', // Plum
-    tabIconDefault: '#8E4585',
-    tabIconSelected: tintColorLight,
+    background: '#FFF',
+    backgroundCard: tintColorDark,
+    text: '#333',
+    shadow: '#A3B1C6',
+    highlight: '#FFFFFF',
+    accent: '#6D5DFC',
   },
   dark: {
-    text: '#4A0E4E', // Deep Purple
-    background: '#FFF0F5', // Lavender Blush
-    tint: tintColorLight,
-    icon: '#8E4585', // Plum
-    tabIconDefault: '#8E4585',
-    tabIconSelected: tintColorLight,
+    background: '#FFF',
+    backgroundCard: tintColorDark,
+    text: '#E2E8F0',
+    shadow: '#1A202C',
+    highlight: '#3A4B63',
+    accent: '#9F7AEA',
   },
 };
