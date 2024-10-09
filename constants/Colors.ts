@@ -16,11 +16,11 @@ export const Colors = {
     tabIconSelected: tintColorLight,
   },
   dark: {
-    text: '#FFC0CB', // Light Pink
-    background: '#4A0E4E', // Deep Purple
-    tint: tintColorDark,
-    icon: '#D8BFD8', // Thistle
-    tabIconDefault: '#D8BFD8',
-    tabIconSelected: tintColorDark,
+    text: '#4A0E4E', // Deep Purple
+    background: '#FFF0F5', // Lavender Blush
+    tint: tintColorLight,
+    icon: '#8E4585', // Plum
+    tabIconDefault: '#8E4585',
+    tabIconSelected: tintColorLight,
   },
 };

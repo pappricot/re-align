@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { ThemedText } from './ThemedText';
 import { ThemedView } from './ThemedView';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 interface VideoCardProps {
   title: string;
@@ -30,6 +31,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
+    backgroundColor: '#FFF',
+    marginHorizontal: 8,  
+    marginTop: 8  
+ 
   },
   thumbnail: {
     width: '100%',
